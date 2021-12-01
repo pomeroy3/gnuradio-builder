@@ -16,10 +16,10 @@ sudo'
 
 volk = 'sudo mkdir git; sudo chmod 777 -R git; cd git; git clone --recursive https://github.com/gnuradio/volk.git;  \
 cd volk;  git checkout 237a6fc9242ea8c48d2bbd417a6ea14feaf7314a;  mkdir build;  cd build;  \
-cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 ../;  make -j64;   sudo make install;'
+cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 ../;  make -j16;   sudo make install;'
 
 gnu_radio = 'cd git; git clone https://github.com/gnuradio/gnuradio.git; cd gnuradio; \
-git checkout c98adfbdbb88c08734a1507d6257755611b947c5; mkdir build; cd build; cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 ../; make -j64; sudo make install'
+git checkout c98adfbdbb88c08734a1507d6257755611b947c5; mkdir build; cd build; cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 ../; make -j16; sudo make install'
 
 xrdp = 'sudo apt install ubuntu-desktop -y; sudo apt update -y; sudo apt install xrdp -y; sudo adduser xrdp ssl-cert; sudo systemctl restart xrdpl; sudo ufw disable;'
 subprocess.check_call(update.split(), shell=False)
